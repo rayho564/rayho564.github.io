@@ -1,1 +1,17 @@
-<button type="button">Click Me!</button>
+
+<a href="#" id="login-btn">Log in with Facebook</a>
+
+<script type="text/javascript">
+document.getElementById('login-btn').onclick = function() {
+  FB.login(function(response) {
+    Log.info('FB.login response', response);
+  });
+  return false;
+}
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-auto-logout-link="false"></div>
+
+
+<button type="button">Sort by name</button>
+<button type="button">Sort by email address</button>
+<button type="button">Search name</button>
