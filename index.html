@@ -1,7 +1,12 @@
-
-<a href="#" id="login-btn">Log in with Facebook</a>
-
 <script type="text/javascript">
+   FB.init({
+    appId            : 'TestApp',
+    autoLogAppEvents : true,
+    status           : true,
+    xfbml            : true,
+    version          : 'v2.9' // or v2.8, v2.7, v2.6, v2.5, v2.4, v2.3,
+  });
+  
 document.getElementById('login-btn').onclick = function() {
   FB.login(function(response) {
     Log.info('FB.login response', response);
